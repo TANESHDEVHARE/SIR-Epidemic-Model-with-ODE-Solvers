@@ -5,6 +5,26 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Course](https://img.shields.io/badge/Course-AM609L-purple.svg)]()
 
+SIR Epidemic ODE Solver
+
+## Data
+
+This project uses the Our World in Data (OWID) COVID-19 dataset.
+The data file (174 MB) is not stored in this repository.
+
+**Download options:**
+- Original source: [OWID catalog](https://catalog.ourworldindata.org/garden/covid/latest/compact/compact.csv)
+- Exact snapshot used in this project (Required dataset in .csv) : [Google Drive](https://drive.google.com/drive/folders/1fPyLxnXKO_jU8PdrIHXcAVY0bvDW1YY4?usp=sharing)
+
+**Snapshot details:**
+- Downloaded: 21 October 2026
+- SHA-256: `paste-your-hash-here`
+
+Save the file as `data/owid_covid_full.csv`.
+
+**Source:** Our World in Data, COVID-19 dataset (CC BY 4.0).
+
+
 **DSTT G5 Project**  
 **Course:** Data Science Tools & Techniques (AM609L)  
 **Group 5 Members:**  
