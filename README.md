@@ -240,11 +240,38 @@ The notebook is organized in sections matching the Table of Contents. All figure
 - **Time discretization:** RK4 with daily steps
 - **Aggregation:** Weekly sums for noise reduction
 
+
 ### I(t) and R(t) Estimation from Case Data
-Since only cumulative cases are reported:
-- Infectious period $D = 14$ days (standard for COVID-19)
-- $I(t) = \text{total\_cases}(t) - \text{total\_cases}(t-D)$
-- $R(t) = \text{total\_cases}(t-D)$
+
+Since only cumulative COVID-19 cases are reported, the number of infectious individuals and recovered individuals is estimated using the following assumptions:
+
+**Assumptions:**
+- Infectious period: \(D = 14\) days (assumed average infectious period).
+- Cumulative cases are used as a proxy for the total number of reported infections.
+
+**Mathematical Formulation:**
+
+The number of infectious individuals at time \(t\) is estimated as:
+
+\[
+I(t) = \text{Total Cases}(t) - \text{Total Cases}(t-D)
+\]
+
+The number of recovered individuals at time \(t\) is estimated as:
+
+\[
+R(t) = \text{Total Cases}(t-D)
+\]
+
+**Where:**
+- \(I(t)\) = Estimated number of currently infectious individuals at time \(t\).
+- \(R(t)\) = Estimated cumulative number of recovered individuals at time \(t\).
+- \(\text{Total Cases}(t)\) = Cumulative reported cases on day \(t\).
+- \(\text{Total Cases}(t-D)\) = Cumulative reported cases 14 days before day \(t\).
+- \(D\) = Assumed infectious period (14 days).
+
+**Note:** These are simplified estimates based on a fixed infectious period. They assume that individuals are no longer infectious after 14 days and that reported cumulative cases adequately represent infections. Actual infectious and recovered counts may differ due to reporting delays, reinfections, deaths, and variations in recovery times.
+
 
 ---
 
